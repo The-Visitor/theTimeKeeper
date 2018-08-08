@@ -19,15 +19,15 @@
 <body>
     <section>
         <div class="row" id="mainDiv">
-            <div class="col m6 l6 s12">
-                <h1>The Time Keeper</h1>
+            <div>
+                <h1 style="text-align: center">The Time Keeper</h1><br> 
                 <div class="card white-grey darken-1" id="mainCard">
-                    <div class="card-content">
-                      <span class="card-title" id="cardHeaderFirstPage">We will help you find time</span><br>
+                    <div class="card-content"><br><br>
+                      <span style="text-align: center" class="card-title" id="cardHeaderFirstPage">We will help you find time</span><br>
                           <div>
                               Your Name.
-                              <input type="text" id="guestName" >
-                              Total hours you have in a day.
+                              <input type="text" id="guestName" ><br>
+                              <br>Total hours you have in a day.
                               <select class="input-field col  s12" style="width: 50%">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -52,7 +52,7 @@
                                     <option value="22">22</option>
                                     <option value="23">23</option>
                                     <option value="24">24</option>
-                                </select>
+                                </select><br>
                                 Total tasks you have in a day.
                                 <select class="input-field col m6 s12">
                                         <option value="1">1</option>
@@ -78,12 +78,13 @@
                                         <option value="22">22</option>
                                         <option value="23">23</option>
                                         <option value="24">24</option>
-                                    </select>
-                                When do you wake up ?
-                                <input type="text" class="timepicker">
+                                    </select><br>
+                                When do you wake up ?<br>
+                                <br><span class="btn"><input type="button" value="Set Time" class="timepicker" style="background: transparent;border-color: transparent;color: white;"></span>
                         </div>
                     </div>
                   </div> 
+                  <button style="align-self: center; margin-left: 35%;margin-top: 10%; width: 30%;font-size: 16px;" class="btn btn-primary">Find me some time</button>
             </div>
         </div>
     </section>

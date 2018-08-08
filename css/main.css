@@ -11,5 +11,6 @@ body {
 
 #mainDiv {
   margin: auto;
-  width: 60%;
+  width: 40%;
+  margin-right: 30%;
   padding: 10px; }
