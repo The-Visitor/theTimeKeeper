@@ -18,14 +18,14 @@
 </head>
 <body>
     <!--First section-->
-    <section id="firstSection">
+    <section id="firstSection" style="min-height: 100%">
         <div class="row" id="mainDiv">
-            <div class="col m3">
+            <div class="col m3 s3">
                 <img src="images/clock.svg" id="clockImage">
             </div>
-            <div class="col m6">
+            <div class="col m6 s3">
                 <h1 style="text-align: center">The Time Keeper</h1><br> 
-                <div class="card white-grey darken-1" id="mainCard">
+                <div class="card white-grey darken-1 mainCard">
                     <div class="card-content"><br><br>
                       <span style="text-align: center" class="card-title" id="cardHeaderFirstPage">We will help you find time</span><br>
                           <div>
@@ -88,25 +88,62 @@
                         </div>
                     </div>
                   </div> 
-                  <button id="findMeTimeButton" class="btn btn-primary">Find me some time</button>
+                  <button id="findMeTimeButton" class="btn btn-primary mainCard">Find me some time</button>
             </div>
-            <div class="col m3">
+            <div class="col m3 s3">
                 <img src="images/calendar.png" id="calendarImage">
             </div>
-        </div>
+        </div><br>
     </section>
 
     <!--Second section-->
-    <section id="secondSection">
+<section id="secondSection">
         <div class="row">
-            <div class="col m6">
-                Pallav Kumar Jha
+            <div class="col m6 container" style="color: white;padding-left:10%;margin-top: 15%;">
+                <h1 style="color: #FFB300">Hello </h1>
+                <h2><span class="left-align" id="userName">Pallav Kumar Jha</span></h2>
+                <p style="font-size: 24px;">We would require little more information <br>
+                from your side to make the time table <br>
+                more useful.</p>              
+                
             </div>
             <div class="col m6">
-                Hello Casual
+                <div class="card mainCard" id="secondPageCard" style="width: 70%;margin-left: 15%;margin-top: 20%;margin-bottom: 20%;">
+                    <h2 class="center-align " style="padding-top: 10%;color: #FFB300">About your task</h2><hr style="width: 50%;"><br>
+                    <form style="padding-left: 10%;padding-right: 10%;" class="card-content">
+                            <div class="input-field col s12">
+                                <select id="importantTasksSelect">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    
+                                </select>
+                                <label style="font-size: 16px;">No of important tasks</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <select id="optionalTasksSelect">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    
+                                </select>
+                                <label style="font-size: 16px;">No of optionals tasks</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <span> Your break time</span>
+                                    <span class="btn" style="float: right;"><input type="button" value="Set Time" class="timepicker" style="background: transparent;border-color: transparent;color: white;"></span>
+                            </div>
+                            <div class="input-field col s12">
+                                    <select id="chillingHoursSelect">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        
+                                    </select>
+                                    <label style="font-size: 16px;">For how long you want to just relax.</label>
+                                </div>
+                                <br><br><br>
+                        <button class="btn btn-primary" style="width:40%;height: 60px; margin-left: 30%;font-size: 24px;">Let's start</button>
+                    </form>
+                </div>
             </div>
 
         </div>
     </section>
+    
 </body>
 </html>

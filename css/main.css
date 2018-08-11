@@ -1,4 +1,4 @@
-#mainCard {
+.mainCard {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
@@ -7,7 +7,7 @@ body {
 
 #cardHeaderFirstPage {
   font-size: 36px;
-  color: #33B5E5; }
+  color: #26a69a; }
 
 #findMeTimeButton {
   -ms-flex-item-align: center;
@@ -28,3 +28,12 @@ body {
   height: 500px;
   width: 500px;
   margin-top: 50%; }
+
+#secondSection {
+  background: -webkit-linear-gradient(309deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: -o-linear-gradient(309deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); }
+
+#secondPageCard {
+  background: white;
+  border-radius: 20px; }
