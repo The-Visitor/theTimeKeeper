@@ -12,13 +12,14 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="scripts/main.js"></script>
 </head>
 <body>
     <!--First section-->
-    <section id="firstSection" style="min-height: 100%">
+    <section id="firstSection">
         <div class="row" id="mainDiv">
             <div class="col m3 s3">
                 <img src="images/clock.svg" id="clockImage">
@@ -97,7 +98,7 @@
     </section>
 
     <!--Second section-->
-<section id="secondSection">
+    <section id="secondSection">
         <div class="row">
             <div class="col m6 container" style="color: white;padding-left:10%;margin-top: 15%;">
                 <h1 style="color: #FFB300">Hello </h1>
@@ -144,6 +145,29 @@
 
         </div>
     </section>
+
+    <!--Third section-->
+    <section id="thirdSection">
+      <div class="card" style="margin: 10px; height: 500px;width: 400px;">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/work.png" style="height: 350px; padding: 10px;">
+                
+            </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><input type="text" placeholder="Task name">
+                
+                <p><input type="number" placeholder="Time needed to complete it"></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+      </div>     
+             
+
+
+    </section>
+
     
 </body>
 </html>
