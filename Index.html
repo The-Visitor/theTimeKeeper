@@ -29,9 +29,9 @@
                       <span style="text-align: center" class="card-title" id="cardHeaderFirstPage">We will help you find time</span><br>
                           <div>
                               Your Name.
-                              <input type="text" id="guestName" ><br>
+                              <input type="text" id="guestName" required ><br>
                               <br>Total hours you have in a day.
-                              <select class="input-field col  s12" style="width: 50%">
+                              <select class="input-field col  s12" id="totalHours" style="width: 50%">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -39,6 +39,7 @@
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
+                                    <option value="8">9</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                     <option value="11">11</option>
@@ -57,7 +58,7 @@
                                     <option value="24">24</option>
                                 </select><br>
                                 Total tasks you have in a day.
-                                <select class="input-field col m6 s12">
+                                <select class="input-field col m6 s12" class="browser-default" id="totalTasks">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -65,6 +66,7 @@
                                         <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="7">7</option>
+                                        <option value="8">8</option>
                                         <option value="9">9</option>
                                         <option value="10">10</option>
                                         <option value="11">11</option>
@@ -83,7 +85,7 @@
                                         <option value="24">24</option>
                                     </select><br>
                                 When do you wake up ?<br>
-                                <br><span class="btn"><input type="button" value="Set Time" class="timepicker" style="background: transparent;border-color: transparent;color: white;"></span>
+                                <br><span class="btn"><input type="button" value="Set Time" class="timepicker" id="wakeUpTime" style="background: transparent;border-color: transparent;color: white;"></span>
                         </div>
                     </div>
                   </div> 
@@ -100,7 +102,7 @@
         <div class="row">
             <div class="col m6 container" style="color: white;padding-left:10%;margin-top: 15%;">
                 <h1 style="color: #FFB300">Hello </h1>
-                <h2><span class="left-align" id="userName">Pallav Kumar Jha</span></h2>
+                <h2><span class="left-align" id="userName"></span></h2>
                 <p style="font-size: 24px;">We would require little more information <br>
                 from your side to make the time table <br>
                 more useful.</p>              
@@ -111,15 +113,15 @@
                     <h2 class="center-align " style="padding-top: 10%;color: #FFB300">About your task</h2><hr style="width: 50%;"><br>
                     <form style="padding-left: 10%;padding-right: 10%;" class="card-content">
                             <div class="input-field col s12">
-                                <select id="importantTasksSelect">
-                                    <option value="" disabled selected>Choose your option</option>
+                                <select class="input-field " id="importantTasksSelect">
+                                    
                                     
                                 </select>
                                 <label style="font-size: 16px;">No of important tasks</label>
                             </div>
                             <div class="input-field col s12">
                                 <select id="optionalTasksSelect">
-                                    <option value="" disabled selected>Choose your option</option>
+                                    
                                     
                                 </select>
                                 <label style="font-size: 16px;">No of optionals tasks</label>
