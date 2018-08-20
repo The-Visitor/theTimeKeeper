@@ -1,3 +1,7 @@
+.mainTaskSection ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
 .mainCard
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
@@ -61,4 +65,13 @@ body
 {
     height: 45px;
     margin: 5%;
+}
+.taskCard
+{
+    margin: 10px; 
+    height: 350px;
+    margin-left:1%;
+    margin-right: 1%; 
+    background: #33B5E5;
+    float: left;
 }

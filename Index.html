@@ -58,7 +58,7 @@
                                     <option value="24">24</option>
                                 </select><br>
                                 Total tasks you have in a day.
-                                <select class="input-field col m6 s12" class="browser-default" id="totalTasks">
+                                <select class="input-field col m6 s12" id="totalTasks">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -113,126 +113,120 @@
                     <h2 class="center-align " style="padding-top: 10%;color: #FFB300">About your task</h2><hr style="width: 50%;"><br>
                     <form style="padding-left: 10%;padding-right: 10%;" class="card-content">
                             <div class="input-field col s12">
-                                <select class="input-field " id="importantTasksSelect">
-                                    
-                                    
+                                <select class="input-field col m6 s12" id="importantTasks">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
                                 </select>
                                 <label style="font-size: 16px;">No of important tasks</label>
                             </div>
                             <div class="input-field col s12">
-                                <select id="optionalTasksSelect">
-                                    
-                                    
+                                <select class="input-field col m6 s12" id="optionalTasks">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
                                 </select>
                                 <label style="font-size: 16px;">No of optionals tasks</label>
                             </div>
                             <div class="input-field col s12">
                                 <span> Your break time</span>
-                                    <span class="btn" style="float: right;"><input type="button" value="Set Time" class="timepicker" style="background: transparent;border-color: transparent;color: white;"></span>
+                                    <span class="btn" style="float: right;"><input type="button" id="breakTime" value="Set Time" class="timepicker" style="background: transparent;border-color: transparent;color: white;"></span>
                             </div>
                             <div class="input-field col s12">
-                                    <select id="chillingHoursSelect">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        
-                                    </select>
+                                <select class="input-field col m6 s12" id="chillHours">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
                                     <label style="font-size: 16px;">For how long you want to just relax.</label>
                                 </div>
                                 <br><br><br>
-                        <button class="btn btn-primary" style="width:40%;height: 60px; margin-left: 30%;font-size: 24px;">Let's start</button>
+                        <button class="btn btn-primary" type="button" id="letsStart" style="width:40%;height: 60px; margin-left: 30%;font-size: 24px;">Let's start</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
     <!--Third section-->
-    <section style="background: linear-gradient(141deg, #f46b45 0%, #eea849 51%);">
+    <section class="mainTaskSection" style="background: linear-gradient(141deg, #f46b45 0%, #eea849 51%);">
         <div class="mainCard container" id="thirdSection">
-            <div style="display: flex">
-                <h3 style="width:25%;" class="valign-wrapper">Important tasks</h3>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
+            <div class="row" style="display: flex" >
+                <h3 class="col m3" class="valign-wrapper">Important tasks</h3>
+                <div class="col m9" id="importantTaskDiv" style="display:flex;overflow-x:scroll; overflow-y:hidden;">
+
                 </div>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
-                </div>
-                <br>
             </div>
             <br>
             <br>
-            <div style="display:flex">
-                <h3 style="width:25%;" class="valign-wrapper">Optional tasks</h3>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
+            <div class="row" style="display:flex">
+                <h3 class="col m3" style="width:25%;" class="valign-wrapper">Optional tasks</h3>
+                <div class="col m9" id="optionalTaskDiv" style="display:flex;overflow-x:scroll; overflow-y:hidden;">
+
                     </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card" style="margin: 10px; height: 350px;width: 23%;margin-left:1%;margin-right: 1%; background: #33B5E5;float: left;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/work.png" style="height: 200px;width: 200px; padding: 10px; margin: auto">
-                    </div><a class="btn-floating activator halfway-fab waves-effect waves-light red"><i class="material-icons right">add</i></a>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><input style="background : white; padding-left: 10px;"  type="text" placeholder="Task name">
-                        <p><input type="number" style="background:white; padding-left: 10px;" placeholder="Time needed to complete it"></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Any extra info<i class="material-icons right">close</i></span>
-                        <p></p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
