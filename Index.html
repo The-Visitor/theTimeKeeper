@@ -98,7 +98,7 @@
     </section>
 
     <!--Second section-->
-    <section id="secondSection">
+    <section id="secondSection" style="display:none;">
         <div class="row">
             <div class="col m6 container" style="color: white;padding-left:10%;margin-top: 15%;">
                 <h1 style="color: #FFB300">Hello </h1>
@@ -212,7 +212,7 @@
         </div>
     </section>
     <!--Third section-->
-    <section class="mainTaskSection" style="background: linear-gradient(141deg, #f46b45 0%, #eea849 51%);">
+    <section class="mainTaskSection" id="mainTaskSection" style="background: linear-gradient(141deg, #f46b45 0%, #eea849 51%);display: none">
         <div class="mainCard container" id="thirdSection">
             <div class="row" style="display: flex" >
                 <h3 class="col m3" class="valign-wrapper">Important tasks</h3>
@@ -226,13 +226,18 @@
                 <h3 class="col m3" style="width:25%;" class="valign-wrapper">Optional tasks</h3>
                 <div class="col m9" id="optionalTaskDiv" style="display:flex;overflow-x:scroll; overflow-y:hidden;">
 
-                    </div>
+                </div>
             </div>
+            <button class="btn waves-effect waves-light" type="button" id="createTimeTable">Submit
+                <i class="material-icons right">send</i>
+              </button>
+              <br>
         </div>
+        
     </section>
 
     <!--Fourth Section-->
-    <section><br>
+    <section id="finalTimeTable" style="display: none"><br>
         <h3 style="text-align:center">This is how we think you should do it .</h3>
         <div class="mainCard container row" id="fourthSection" style="margin-bottom:10px;">
             <div class="col m4 l4 ">
