@@ -16,13 +16,13 @@ $(document).ready(function()
       var breakTime = $("#breakTime").val();
           for(var i =0;i<importantTasks;i++)
           {
-            var str = "<div class='card taskCard'><div class='card-image waves-effect waves-block waves-light' style='margin-bottom:30px'><img class='activator' src='images/work.png' style='height: 200px;width: 200px; padding: 10px; margin: auto'></div><a class='btn-floating activator halfway-fab waves-effect waves-light red'><i class='material-icons right'>add</i></a><div class='card-content'><span class='card-title activator grey-text text-darken-4'><input style='background : white; padding-left: 10px;'  type='text' placeholder='Task name'><p><input id='importantTask"+i+"Hour' type='number' style='background:white; padding-left: 10px;' placeholder='Time needed to complete it'></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4'>Any extra info<i class='material-icons right'>close</i></span><p></p></div></div>";
+            var str = "<div class='card taskCard'><div class='card-image waves-effect waves-block waves-light' style='margin-bottom:30px'><img class='activator' src='images/work.png' style='height: 200px;width: 200px; padding: 10px; margin: auto'></div><a class='btn-floating activator halfway-fab waves-effect waves-light red'><i class='material-icons right'>add</i></a><div class='card-content'><span class='card-title activator grey-text text-darken-4'><input id='importantTaskName"+i+"' style='background : white; padding-left: 10px;'  type='text' placeholder='Task name'><p><input id='importantTask"+i+"Hour' type='number' style='background:white; padding-left: 10px;' placeholder='Time needed to complete it'></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4'>Any extra info<i class='material-icons right'>close</i></span><p></p></div></div>";
             $("#importantTaskDiv").append(str);
             
           }
           for(var i =0;i<optionalTasks;i++)
           {
-            var str = "<div class='card taskCard'><div class='card-image waves-effect waves-block waves-light' style='margin-bottom:30px'><img class='activator' src='images/work.png' style='height: 200px;width: 200px; padding: 10px; margin: auto'></div><a class='btn-floating activator halfway-fab waves-effect waves-light red'><i class='material-icons right'>add</i></a><div class='card-content'><span class='card-title activator grey-text text-darken-4'><input style='background : white; padding-left: 10px;'  type='text' placeholder='Task name'><p><input type='number' style='background:white; padding-left: 10px;' placeholder='Time needed to complete it'></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4'>Any extra info<i class='material-icons right'>close</i></span><p></p></div></div>";
+            var str = "<div class='card taskCard'><div class='card-image waves-effect waves-block waves-light' style='margin-bottom:30px'><img class='activator' src='images/work.png' style='height: 200px;width: 200px; padding: 10px; margin: auto'></div><a class='btn-floating activator halfway-fab waves-effect waves-light red'><i class='material-icons right'>add</i></a><div class='card-content'><span class='card-title activator grey-text text-darken-4'><input id='optionalTaskName"+i+"' style='background : white; padding-left: 10px;'  type='text' placeholder='Task name'><p><input id='optionalTask"+i+"Hour' type='number' style='background:white; padding-left: 10px;' placeholder='Time needed to complete it'></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4'>Any extra info<i class='material-icons right'>close</i></span><p></p></div></div>";
             $("#optionalTaskDiv").append(str);
           }
     });
@@ -45,15 +45,47 @@ $(document).ready(function()
       $("#secondSection").hide(1000);
       $("#mainTaskSection").hide(1000);
       $("#finalTimeTable").show(1000);
+    });
+
+    $("#test").click(function(){
+      var temp1 = $("#wakeUpTime").val();
+      var temp2 = $("#totalHours").val();
+      var time = temp1.split(':');
+      var totalTime = parseInt(temp2)+parseInt(time[0]);
       var totalTaskHour=0;
+      var taskHours = [];
+      var taskNames = [];
       var importantTasks = $("#importantTasks").val();
+      var optionalTasks = $("#optionalTasks").val();
       for(var i =0;i<importantTasks;i++)
       {
-        var temp = parseInt($("#importantTask"+i+"Hour").val());
-        totalTaskHour+=temp;
+        var temp1 = parseInt($("#importantTask"+i+"Hour").val());
+        var temp2 = $("#importantTaskName"+i).val();
+        taskHours[i]= temp1;
+        taskNames[i]= temp2;
+        totalTaskHour+=temp1;
       }
-      alert(totalTaskHour);
+      var j=0;
+      for(var i =importantTasks;i<(optionalTasks+importantTasks);i++)
+      {
+        var temp1 = parseInt($("#optionalTask"+j+"Hour").val());
+        var temp2 = $("#importantTaskName"+j).val();
+        taskHours[i]= temp1;
+        taskNames[i]=temp2;
+        j++;
+      }
+      if(totalTime<totalTaskHour)
+      {
+        alert("You have less hours in a day . You need to create time.")
+      }
+      else{
+        alert("Let's get you started.");
+        var totalTasks = $("#importantTasks").val() + $("#optionalTasks").val();
+        console.log(taskHours);
+        console.log(taskNames);
+      }
     });
+    
 
 
   });
