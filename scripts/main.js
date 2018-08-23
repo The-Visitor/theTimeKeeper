@@ -55,7 +55,7 @@ $(document).ready(function()
       var totalTaskHour=0;
       var taskHours = [];
       var taskNames = [];
-      var importantTasks = $("#importantTasks").val();
+      var importantTasks = parseInt($("#importantTasks").val());
       var optionalTasks = $("#optionalTasks").val();
       for(var i =0;i<importantTasks;i++)
       {
@@ -66,10 +66,12 @@ $(document).ready(function()
         totalTaskHour+=temp1;
       }
       var j=0;
-      for(var i =importantTasks;i<(optionalTasks+importantTasks);i++)
+      var z = parseInt($("#importantTasks").val()) + parseInt($("#optionalTasks").val());
+      for(var i =(importantTasks);i<z;i++)
       {
+        alert(45);
         var temp1 = parseInt($("#optionalTask"+j+"Hour").val());
-        var temp2 = $("#importantTaskName"+j).val();
+        var temp2 = $("#optionalTaskName"+j).val();
         taskHours[i]= temp1;
         taskNames[i]=temp2;
         j++;
@@ -79,10 +81,24 @@ $(document).ready(function()
         alert("You have less hours in a day . You need to create time.")
       }
       else{
-        alert("Let's get you started.");
-        var totalTasks = $("#importantTasks").val() + $("#optionalTasks").val();
-        console.log(taskHours);
-        console.log(taskNames);
+        var totalTasks = parseInt($("#importantTasks").val()) + parseInt($("#optionalTasks").val());
+        var oldTime = $("#wakeUpTime").val();
+        for(var i =0;i<totalTasks;i++)
+        {
+          var time1 = oldTime.split(":");
+          if(parseInt(time1[0])+parseInt(taskHours[i])<10)
+          {
+            var newTime = "0"+parseInt(time1[0])+parseInt(taskHours[i])+":"+time1[1];
+          }
+          else
+          {
+            var newTime = parseInt(time1[0])+parseInt(taskHours[i])+":"+time1[1];
+          }
+          var newTime = parseInt(time1[0])+parseInt(taskHours[i])+":"+time1[1];
+          var finalTime = oldTime + "**********" + newTime + "********"+ taskNames[i];
+          console.log(finalTime);
+          oldTime = newTime;
+        }
       }
     });
     
